@@ -1,0 +1,6 @@
+name: 'Vehicles'
+main: uk.hannam.vehiclesapi.main.Core
+author: 'zac666'
+version: '1.0'
+api-version: '1.17'
+depend: [ProtocolLib]

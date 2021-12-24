@@ -46,9 +46,8 @@ public class VehicleLocation {
 	 */
 	public static VehicleLocation fromLocation(Location paramLocation) {
 		
-		VehicleLocation vehicleLocation = new VehicleLocation(paramLocation.getWorld(),
+		return new VehicleLocation(paramLocation.getWorld(),
 				paramLocation.getX(), paramLocation.getY(), paramLocation.getZ(), Math.toRadians(paramLocation.getYaw() + 180)); //creates a new VehicleLocation using the arguments given.
-		return vehicleLocation;
 	}
 	
 	/**

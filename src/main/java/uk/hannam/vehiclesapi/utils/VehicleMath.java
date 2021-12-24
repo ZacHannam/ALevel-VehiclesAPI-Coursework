@@ -31,18 +31,8 @@ public final class VehicleMath {
 		x += Math.cos(paramYaw + 0.5 * Math.PI) * paramDisplacement.getZ();
 		z += Math.sin(paramYaw +  0.5 * Math.PI) * paramDisplacement.getZ();
 		
-		/*
-		if(paramDisplacement.getX() < 0) {
-			x += Math.cos(paramYaw + 0.5 * Math.PI) * paramDisplacement.getX();
-			z += Math.sin(paramYaw +  0.5 * Math.PI) * paramDisplacement.getX();
-		} else {
-			
-		}
-		*/
-		
-		Location location = new Location(paramBaseLocation.getWorld(), x, paramBaseLocation.getY() + paramDisplacement.getY(), z);
-		
-		return location;
+		return new Location(paramBaseLocation.getWorld(), x, paramBaseLocation.getY() + paramDisplacement.getY(), z);
+
 	}
 	
 	/**

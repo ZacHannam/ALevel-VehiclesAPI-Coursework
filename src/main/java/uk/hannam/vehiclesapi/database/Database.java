@@ -85,8 +85,7 @@ public class Database {
 		Statement statement;
 		try {
 			statement = this.getConnection().createStatement();
-			ResultSet result = statement.executeQuery(paramInstruction);
-			return result;
+			return statement.executeQuery(paramInstruction);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

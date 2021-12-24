@@ -37,9 +37,8 @@ public abstract class VehicleCommand extends BukkitCommand { // abstract cannot 
 		// craft server should not be null and if it is then there was an error above.
 		assert craftserver != null;
 		try {
-			SimpleCommandMap commandMap = (SimpleCommandMap) craftserver.cast(VehiclesAPI.getPlugin().getServer()).getClass().getMethod("getCommandMap")
+			return (SimpleCommandMap) craftserver.cast(VehiclesAPI.getPlugin().getServer()).getClass().getMethod("getCommandMap")
 					.invoke(VehiclesAPI.getPlugin().getServer()); // gets the command map in use by the server
-			return commandMap;
 		} catch (IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
 			e.printStackTrace(); // should be absolutely no errors, however exceptions are not thrown in runtime so we have to check for them.
 		}
